@@ -15,7 +15,7 @@ export default async function handler(
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'X-Secret': process.env.N8N_SECRET as string
+       // 'X-Secret': process.env.N8N_SECRET as string
       },
       body: JSON.stringify(payload)
     });

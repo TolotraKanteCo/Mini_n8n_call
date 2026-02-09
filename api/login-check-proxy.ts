@@ -11,11 +11,10 @@ export default async function handler(
   try {
     const payload = req.body;
 
-    const response = await fetch(process.env.N8N_WEBHOOK_URL as string, {
+    const response = await fetch(process.env.N8N_CHECK_LOGIN as string, {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json',
-        // 'X-Secret': process.env.N8N_SECRET as string
+        'Content-Type': 'application/json'
       },
       body: JSON.stringify(payload)
     });
